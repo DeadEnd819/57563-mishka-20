@@ -1,0 +1,80 @@
+.slider__toggles {
+  display: flex;
+}
+
+.slider__toggle {
+  padding: 12px 42px 10px 37px;
+  background-color: @color__white;
+  border: 1px solid @color__white-two;
+}
+
+.slider__toggle--right {
+  border-left: none;
+}
+
+.slider__toggle:hover,
+.slider__toggle:focus, {
+  opacity: 0.6;
+}
+
+.slider__toggle:active {
+  opacity: 0.3;
+}
+
+.slider__btn {
+  display: block;
+  margin-top: 38px;
+  padding: 14px 177px 15px 79px;
+  font-family: @font__bold;
+  font-weight: bold;
+  font-size: 1.3846rem;
+  line-height: 1.11;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: @color__white;
+  color: @color__dark-lite;
+  border: 2px solid @color__dark-lite;
+}
+
+.slider__btn:hover,
+.slider__btn:focus {
+  background-color: @color__dark-lite;
+  color: @color__white;
+}
+
+.slider__btn:active {
+  color: @color__white-alfa;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__btn {
+    display: inline-block;
+    position: absolute;
+    top: 80px;
+    right: 38px;
+    margin: 0;
+    vertical-align: middle;
+    padding: 15px 38px 13px 38px;
+    font-size: 1.3077rem;
+    line-height: 1.18;
+  }
+
+  .slider__toggle {
+    padding: 10px 18px;
+    border: none;
+
+    &--left {
+      margin-right: 1px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__btn {
+    top: 88px;
+    right: 50px;
+    padding: 15px 38px 13px 38px;
+    font-size: 1.3077rem;
+    line-height: 1.18;
+  }
+}

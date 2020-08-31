@@ -1,0 +1,61 @@
+.intro {
+  position: relative;
+  min-height: 177px;
+  text-align: center;
+  background-color: @color__grey;
+}
+
+.intro__title {
+  font-weight: bold;
+  font-size: 2.0769rem;
+  margin: 0;
+  padding-top: 70px;
+  line-height: 1.11;
+  letter-spacing: 1.4px;
+  color: @color__black;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    min-height: 226px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      top: 202px;
+      left: 0;
+      background: url("../img/bg-zigzag-fill.svg");
+      background-size: 1250px 43px;
+      background-repeat: repeat-x;
+    }
+  }
+
+  .intro__title {
+    padding-top: 94px;
+    padding-left: 2px;
+    font-size: 3.3077rem;
+    line-height: 1.16;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    min-height: 255px;
+
+    &::after {
+      top: 231px;
+    }
+  }
+
+  .intro__title {
+    padding-top: 93px;
+    margin-left: 1px;
+    font-size: 4.0769rem;
+    line-height: 1.08;
+    letter-spacing: 2.3px;
+  }
+}

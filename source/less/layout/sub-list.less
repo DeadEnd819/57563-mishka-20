@@ -1,0 +1,23 @@
+.sub-list {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .sub-list {
+    position: absolute;
+    top: 108px;
+    display: flex;
+    font-size: 1.1538rem;
+    z-index: 2;
+  }
+
+  .sub-list__item {
+    &--left {
+      margin-left: 50px;
+    }
+
+    &--right {
+      margin-left: 61px;
+    }
+  }
+}

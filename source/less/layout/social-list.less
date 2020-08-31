@@ -1,0 +1,29 @@
+.social-list__item {
+  margin-top: 9px;
+  margin-right: 40px;
+
+  &--facebook {
+    margin-top: 4px;
+  }
+
+  &--twitter {
+    margin-right: 4px;
+  }
+}
+
+.social-list::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  right: 31px;
+  width: 260px;
+  height: 1px;
+  background: @color__dark-grey;
+  opacity: 0.1;
+}
+
+@media (min-width: @tablet-width) {
+  .social-list::after {
+    display: none;
+  }
+}
