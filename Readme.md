@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Наумов](https://up.htmlacademy.ru/adaptive/20/user/57563).
-* Наставник: `Неизвестно`.
+* Наставник: [null](https://up.htmlacademy.ru/adaptive/20/user/57563).
 
 ---
 
