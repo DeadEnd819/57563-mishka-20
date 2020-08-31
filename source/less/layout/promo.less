@@ -1,0 +1,279 @@
+.promo {
+  position: relative;
+  font-family: @font__bold;
+  font-weight: bold;
+  color: @color__dark-grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 7px;
+    bottom: -43px;
+    left: 0;
+    width: 100%;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: 319px 7px;
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 320px;
+  padding: 0 1px;
+  margin: 0 auto;
+}
+
+.promo__wrapper-title {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 250px;
+  margin-left: 31px;
+}
+
+.promo__title,
+.promo__order-btn {
+  font-size: 1.3077rem;
+  line-height: 1.18;
+}
+
+.promo__title {
+  margin-top: 4px;
+  color: @color__seafoam-blue;
+  text-transform: uppercase;
+}
+
+.promo__name {
+  margin-top: 25px;
+  margin-bottom: 2px;
+  font-size: 1.9231rem;
+  line-height: 1.2;
+}
+
+.promo__wrapper-desc {
+  width: 250px;
+  margin-left: 31px;
+  margin-bottom: 28px;
+}
+
+.promo__desc,
+.promo__grid {
+  font-family: @font__normal;
+  font-weight: normal;
+  font-size: 1.1538rem;
+  line-height: 1.6;
+}
+
+.promo__desc {
+  margin-top: 7px;
+  margin-bottom: 18px;
+}
+
+.promo__img-wrapper {
+  padding-left: 30px;
+}
+
+.promo__grid {
+  width: 259px;
+  border-collapse: collapse;
+  line-height: 1.33;
+}
+
+.promo__price {
+  font-size: 1.3077rem;
+  line-height: 1.41;
+}
+
+.promo__order-wrapper {
+  text-align: center;
+}
+
+.promo__order-btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 11px;
+  padding: 14px 83px;
+  text-transform: uppercase;
+  background-color: @color__white;
+  color: @color__dark-lite;
+  border: 2px solid @color__dark-lite;
+}
+
+.promo__order-btn:hover,
+.promo__order-btn:focus,
+.promo__order-btn:active {
+  background-color: @color__dark-lite;
+  color: @color__white;
+}
+
+.promo__order-btn:active {
+  color: @color__white-alfa;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    &::after {
+      bottom: -29px;
+      left: -97px;
+      width: 116%;
+      height: 15px;
+      background-size: 750px 15px;
+    }
+  }
+
+  .promo__wrapper {
+    width: 744px;
+    min-height: 550px;
+    padding: 0 12px;
+  }
+
+  .promo__wrapper-title {
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-left: 33px;
+    padding-bottom: 30px;
+  }
+
+  .promo__title,
+  .promo__name {
+    .reset-text();
+  }
+
+  .promo__title {
+    width: 70px;
+    margin-top: 11px;
+    margin-right: 99px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .promo__name {
+    margin-right: 146px;
+    font-size: 3.3077rem;
+    line-height: 1.16;
+    color: @color__black;
+  }
+
+  .promo__wrapper-desc {
+    width: 292px;
+    margin: 0;
+    margin-top: 14px;
+    margin-left: 38px;
+  }
+
+  .promo__desc {
+    margin-bottom: 37px;
+    font-size: 1.3077rem;
+    line-height: 1.76;
+  }
+
+  .promo__grid {
+    width: 291px;
+  }
+
+  .promo__img-wrapper {
+    position: absolute;
+    top: 107px;
+    right: 51px;
+  }
+
+  .promo__order-wrapper {
+    width: 292px;
+    margin-top: 37px;
+    margin-left: 36px;
+  }
+
+  .promo__price {
+    font-size: 1.5385rem;
+    line-height: 1.2;
+  }
+
+  .promo__order-btn {
+    margin-top: 14px;
+    padding-left: 100px;
+    padding-right: 99px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    &::after {
+      bottom: -2px;
+      height: 23px;
+      background-size: 1050px 23px;
+      background-position: 17px;
+      opacity: 0.5;
+    }
+  }
+
+  .promo__wrapper {
+    width: 1150px;
+    min-height: 655px;
+    padding: 0 25px;
+    padding-top: 100px;
+  }
+
+  .promo__img-wrapper {
+    top: 26px;
+    right: 75px;
+  }
+
+  .promo__wrapper-title {
+    margin-top: -22px;
+    margin-left: 12px;
+    padding-bottom: 47px;
+    z-index: 1;
+  }
+
+  .promo__desc {
+    margin-bottom: 52px;
+  }
+
+  .promo__title {
+    order: 1;
+    width: 70px;
+    padding-top: 5px;
+    margin-right: 54px;
+    font-size: 1.3077rem;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .promo__name {
+    margin-right: 415px;
+    font-size: 4.0769rem;
+    line-height: 1.08;
+  }
+
+  .promo__wrapper-desc,
+  .promo__order-wrapper {
+    margin-top: -4px;
+    margin-left: 225px;
+  }
+
+  .promo__grid {
+    margin-bottom: 95px;
+    font-size: 1.1538rem;
+    line-height: 1.33;
+  }
+
+  .promo__order-wrapper {
+    width: 292px;
+    text-align: center;
+  }
+
+  .promo__price {
+    margin-top: 18px;
+    margin-bottom: 22px;
+    font-size: 1.5385rem;
+    line-height: 1.2;
+  }
+
+  .promo__order-btn {
+    margin-top: 11px;
+  }
+}
