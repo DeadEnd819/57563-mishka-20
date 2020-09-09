@@ -1,7 +1,7 @@
 .main-nav {
-  position: absolute;
   top: 80px;
   min-width: 322px;
+  margin-bottom: -1px;
   z-index: 10;
   background-color: #ffffff;
 }
@@ -9,7 +9,7 @@
 .main-nav__toggle {
   display: block;
   position: absolute;
-  top: -48px;
+  top: 28px;
   right: 31px;
   width: 21px;
   height: 20px;
@@ -18,12 +18,12 @@
   cursor: pointer;
 
   &--open {
-    background-image: url("../img/icon-menu-open.svg");
+    background-image: url("../img/icon-menu-close.svg");
     background-repeat: no-repeat;
   }
 
   &--close {
-    background-image: url("../img/icon-menu-close.svg");
+    background-image: url("../img/icon-menu-open.svg");
     background-repeat: no-repeat;
   }
 }
@@ -102,7 +102,7 @@
   .main-nav {
     position: relative;
     top: 0;
-    min-width: 744px;
+    margin-bottom: 0;
     background-color: #ffffff;
   }
 
