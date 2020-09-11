@@ -1,6 +1,7 @@
+'use strict';
+
 var btn = document.querySelector(".main-nav__toggle");
 var menu = document.querySelector(".main-nav__wrapper");
-
 
 btn.classList.remove('main-nav__toggle-hidden');
 btn.classList.add('main-nav__toggle--open');

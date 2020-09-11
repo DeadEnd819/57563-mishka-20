@@ -84,33 +84,36 @@
 
   .order-phone__icon {
     top: 33px;
-    right: 94px;
+    right: 64px;
   }
 
   .order-phone__order-title {
     margin-top: 8px;
-    margin-left: 21px;
-    margin-right: 135px;
+    margin-left: 40px;
+    margin-right: 134px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .order-phone__order-title {
     margin-left: 112px;
-    margin-right: 82px;
+    margin-right: 83px;
   }
 
-  .order-phone__input,
-  .order-mail__input {
-    width: 700px;
+  .order-phone__input {
+    width: 696px;
   }
 
   .order-phone {
-    width: 1150px;
-    padding: 0 25px;
+    width: 100%;
+    padding: 0 1px;
   }
 
   .order-phone__icon {
-    right: 283px;
+    right: 258px;
+  }
+
+  .order-phone__input::placeholder {
+    padding-left: 15px;
   }
 }
