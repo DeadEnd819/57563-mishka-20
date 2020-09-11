@@ -1,6 +1,6 @@
 .order-mail {
   position: relative;
-  width: 320px;
+  width: 255px;
   padding: 0 1px;
   margin: 0 auto;
 }
@@ -19,7 +19,7 @@
 }
 
 .order-mail__input {
-  width: 100%;
+  width: 96%;
   padding-bottom: 20px;
   border: none;
   box-shadow: inset 0 -2px 0 0 @color__black;
@@ -29,15 +29,16 @@
   }
 }
 
-.order-mail::after {
+.order-mail__icon {
   content: "";
   display: block;
   position: absolute;
-  top: 66px;
-  right: 36px;
+  top: 68px;
+  right: 13px;
   width: 32px;
   height: 26px;
-  background: url("../img/icon-mail.svg");
+  mask-image: url("../img/icon-mail.svg");
+  background-color: @color__black;
   opacity: 0.2;
 }
 
@@ -46,6 +47,13 @@
 .order-mail__input:active {
   outline: none;
   box-shadow: inset 0 -2px 0 0 @seafoam-lite;
+}
+
+.order-mail__input:hover + .order-mail__icon,
+.order-mail__input:focus + .order-mail__icon,
+.order-mail__input:active + .order-mail__icon {
+  background-color: @seafoam-lite;
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -67,9 +75,9 @@
   }
 
   .order-mail__input {
-    width: 501px;
+    width: 497px;
     height: 60px;
-    padding-top: 4px;
+    padding-top: 1px;
     padding-bottom: 0;
   }
 
@@ -77,15 +85,15 @@
     padding-left: 17px;
   }
 
-  .order-mail::after {
-    top: 23px;
-    right: 60px;
+  .order-mail__icon {
+    top: 20px;
+    right: 90px;
   }
 
   .order-mail__order-title {
-    margin-left: 40px;
+    margin-top: -8px;
+    margin-left: 22px;
     margin-right: 110px;
-    margin-top: -5px;
   }
 }
 
@@ -104,7 +112,7 @@
     width: 700px;
   }
 
-  .order-mail::after {
+  .order-mail__icon {
     right: 280px;
   }
 }
