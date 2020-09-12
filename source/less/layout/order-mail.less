@@ -1,6 +1,6 @@
 .order-mail {
   position: relative;
-  width: 320px;
+  width: 255px;
   padding: 0 1px;
   margin: 0 auto;
 }
@@ -19,7 +19,8 @@
 }
 
 .order-mail__input {
-  width: 100%;
+  width: 96%;
+  height: 18px;
   padding-bottom: 20px;
   border: none;
   box-shadow: inset 0 -2px 0 0 @color__black;
@@ -29,15 +30,16 @@
   }
 }
 
-.order-mail::after {
+.order-mail__icon {
   content: "";
   display: block;
   position: absolute;
-  top: 66px;
-  right: 36px;
+  top: 68px;
+  right: 13px;
   width: 32px;
   height: 26px;
-  background: url("../img/icon-mail.svg");
+  mask-image: url("../img/icon-mail.svg");
+  background-color: @color__black;
   opacity: 0.2;
 }
 
@@ -46,6 +48,13 @@
 .order-mail__input:active {
   outline: none;
   box-shadow: inset 0 -2px 0 0 @seafoam-lite;
+}
+
+.order-mail__input:hover + .order-mail__icon,
+.order-mail__input:focus + .order-mail__icon,
+.order-mail__input:active + .order-mail__icon {
+  background-color: @seafoam-lite;
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -67,44 +76,52 @@
   }
 
   .order-mail__input {
-    width: 501px;
+    width: 497px;
     height: 60px;
-    padding-top: 4px;
+    padding-top: 1px;
     padding-bottom: 0;
   }
 
   .order-mail__input::placeholder {
     padding-left: 17px;
+    line-height: 3.5;
   }
 
-  .order-mail::after {
-    top: 23px;
+  .order-mail__icon {
+    top: 20px;
     right: 60px;
   }
 
   .order-mail__order-title {
-    margin-left: 40px;
-    margin-right: 110px;
-    margin-top: -5px;
+    margin-top: -8px;
+    margin-left: 41px;
+    margin-right: 109px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .order-mail {
-    width: 1150px;
-    padding: 0 25px;
+    width: 100%;
+    padding: 0 1px;
   }
 
   .order-mail__order-title {
+    margin-top: -3px;
     margin-left: 112px;
-    margin-right: 58px;
+    margin-right: 59px;
   }
 
   .order-mail__input {
-    width: 700px;
+    width: 696px;
+    padding-top: 4px;
   }
 
-  .order-mail::after {
-    right: 280px;
+  .order-mail__icon {
+    top: 23px;
+    right: 254px;
+  }
+
+  .order-mail__input::placeholder {
+    padding-left: 15px;
   }
 }

@@ -26,7 +26,7 @@
   margin: 0 auto;
   padding-top: 70px;
   font-size: 2.0769rem;
-  line-height: 1.11;
+  line-height: 1.13;
   text-align: center;
 }
 
@@ -35,8 +35,9 @@
 }
 
 .categories__list {
+  .reset-list();
   position: absolute;
-  top: 124px;
+  top: 123px;
   font-size: 1.4615rem;
   line-height: 1.26;
 }
@@ -44,6 +45,7 @@
 .categories__link {
   display: inline-block;
   vertical-align: middle;
+  height: 46px;
   min-width: 292px;
   padding-top: 28px;
   padding-bottom: 29px;
@@ -106,6 +108,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .categories {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      left: 0;
+      bottom: -7px;
+      background: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: 783px 24px;
+    }
+  }
+
   .categories__wrapper {
     position: relative;
     width: 744px;
@@ -119,19 +138,6 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
     }
-  }
-
-  .categories::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 24px;
-    left: 0;
-    bottom: 110px;
-    background: url("../img/bg-zigzag-fill.svg");
-    background-repeat: repeat-x;
-    background-size: 770px 24px;
   }
 
   .categories__title {
@@ -153,6 +159,7 @@
   .categories__link {
     position: relative;
     min-width: 298px;
+    height: 55%;
     padding-top: 28px;
     padding-bottom: 30px;
     padding-left: 36px;
@@ -196,9 +203,9 @@
     &::after {
       width: 100%;
       height: 43px;
-      left: 13px;
-      bottom: 98px;
-      background-size: 1250px 43px;
+      left: 0;
+      bottom: -18px;
+      background-size: 1272px 43px;
     }
   }
 

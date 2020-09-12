@@ -1,6 +1,11 @@
 .catalog {
   margin: 30px;
   margin-top: 29px;
+  margin-bottom: 30px;
+}
+
+.catalog__list {
+  .reset-list();
 }
 
 .catalog__item {
@@ -26,9 +31,12 @@
 
   .catalog__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1053px;
   }
 
   .catalog__item {
-    margin-right: 50px;
+    margin-bottom: 58px;
   }
 }

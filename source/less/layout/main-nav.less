@@ -1,7 +1,7 @@
 .main-nav {
-  position: absolute;
   top: 80px;
   min-width: 322px;
+  margin-bottom: -1px;
   z-index: 10;
   background-color: #ffffff;
 }
@@ -9,8 +9,8 @@
 .main-nav__toggle {
   display: block;
   position: absolute;
-  top: -48px;
-  right: 31px;
+  top: 29px;
+  right: 19px;
   width: 21px;
   height: 20px;
   background-color: transparent;
@@ -18,12 +18,14 @@
   cursor: pointer;
 
   &--open {
-    background-image: url("../img/icon-menu-open.svg");
+    background-image: url("../img/icon-menu-close.svg");
     background-repeat: no-repeat;
   }
 
   &--close {
-    background-image: url("../img/icon-menu-close.svg");
+    top: 32px;
+    right: 18px;
+    background-image: url("../img/icon-menu-open.svg");
     background-repeat: no-repeat;
   }
 }
@@ -44,6 +46,7 @@
 }
 
 .main-nav__list {
+  .reset-list();
   font-size: 1.3077rem;
   line-height: 1.41;
 }
@@ -51,17 +54,28 @@
 .main-nav__link {
   display: block;
   height: 78px;
-  padding-left: 77px;
+  padding-left: 76px;
   color: @color__black;
   border-bottom: 1px solid @color__white-two;
 }
 
-.main-nav__link:hover {
-  color: @color__black-alfa;
+.main-nav__link:hover,
+.main-nav__link:focus {
+  opacity: 0.6;
 }
 
 .main-nav__link:active {
-  color: @color__dark-alfa;
+  opacity: 0.3;
+}
+
+.main-nav__link--block {
+  cursor: default;
+}
+
+.main-nav__link--block:hover,
+.main-nav__link--block:focus,
+.main-nav__link--block:active {
+  opacity: 1;
 }
 
 .main-nav__basket-title {
@@ -71,9 +85,9 @@
 
 .main-nav__search-svg,
 .main-nav__basket-svg {
-  margin-left: -48px;
-  padding-top: 30px;
-  padding-right: 25px;
+  margin-left: -43px;
+  padding-top: 31px;
+  padding-right: 21px;
   opacity: 0.2;
 }
 
@@ -91,7 +105,7 @@
 }
 
 .main-nav__basket-svg {
-  margin-left: -50px;
+  margin-left: -46px;
 }
 
 .main-nav__delivery {
@@ -102,12 +116,17 @@
   .main-nav {
     position: relative;
     top: 0;
-    min-width: 744px;
+    margin-bottom: 0;
     background-color: #ffffff;
   }
 
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__toggle-hidden,
+  .main-nav__menu-close {
+    display: block;
   }
 
   .main-nav__link {
@@ -130,7 +149,7 @@
 
   .main-nav__search-svg {
     margin-top: 6px;
-    margin-left: 27px;
+    margin-left: 24px;
   }
 
   .main-nav__basket-svg {
@@ -139,8 +158,8 @@
   }
 
   .main-nav__basket-title {
-    margin-top: 6px;
-    margin-left: 7px;
+    margin-top: 5px;
+    margin-left: 10px;
   }
 
   .main-nav__delivery {

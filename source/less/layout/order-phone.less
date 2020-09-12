@@ -1,6 +1,6 @@
 .order-phone {
   position: relative;
-  width: 320px;
+  width: 255px;
   padding: 0 1px;
   margin: 0 auto;
 }
@@ -13,7 +13,8 @@
 }
 
 .order-phone__input {
-  width: 100%;
+  width: 96%;
+  height: 18px;
   margin-top: -2px;
   padding-bottom: 17px;
   border: none;
@@ -31,15 +32,15 @@
   position: relative;
 }
 
-.order-phone::after {
-  content: "";
+.order-phone__icon {
   display: block;
   position: absolute;
   top: 66px;
-  right: 39px;
+  right: 17px;
   width: 25px;
   height: 24px;
-  background: url("../img/icon-phone.svg");
+  mask-image: url("../img/icon-phone.svg");
+  background-color: @color__black;
   opacity: 0.2;
 }
 
@@ -48,6 +49,13 @@
 .order-phone__input:active {
   outline: none;
   box-shadow: inset 0 -2px 0 0 @seafoam-lite;
+}
+
+.order-phone__input:hover + .order-phone__icon,
+.order-phone__input:focus + .order-phone__icon,
+.order-phone__input:active + .order-phone__icon {
+  background-color: @seafoam-lite;
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -65,17 +73,17 @@
   .order-phone__input::placeholder {
     padding-left: 17px;
     font-size: 1.4615rem;
-    line-height: 0.95;
+    line-height: 3.5;
   }
 
   .order-phone__input {
-    width: 501px;
+    width: 497px;
     height: 60px;
     padding-top: 16px;
     padding-bottom: 0;
   }
 
-  .order-phone::after {
+  .order-phone__icon {
     top: 33px;
     right: 64px;
   }
@@ -90,20 +98,23 @@
 @media (min-width: @desktop-width) {
   .order-phone__order-title {
     margin-left: 112px;
-    margin-right: 82px;
+    margin-right: 83px;
   }
 
-  .order-phone__input,
-  .order-mail__input {
-    width: 700px;
+  .order-phone__input {
+    width: 696px;
   }
 
   .order-phone {
-    width: 1150px;
-    padding: 0 25px;
+    width: 100%;
+    padding: 0 1px;
+  }
 
-    &::after {
-      right: 283px;
-    }
+  .order-phone__icon {
+    right: 258px;
+  }
+
+  .order-phone__input::placeholder {
+    padding-left: 15px;
   }
 }
