@@ -59,12 +59,23 @@
   border-bottom: 1px solid @color__white-two;
 }
 
-.main-nav__link:hover {
-  color: @color__black-alfa;
+.main-nav__link:hover,
+.main-nav__link:focus {
+  opacity: 0.6;
 }
 
 .main-nav__link:active {
-  color: @color__dark-alfa;
+  opacity: 0.3;
+}
+
+.main-nav__link--block {
+  cursor: default;
+}
+
+.main-nav__link--block:hover,
+.main-nav__link--block:focus,
+.main-nav__link--block:active {
+  opacity: 1;
 }
 
 .main-nav__basket-title {
