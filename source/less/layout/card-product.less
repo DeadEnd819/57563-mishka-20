@@ -67,25 +67,27 @@
   color: @color__dark-grey;
 }
 
+.card-product__order-wrapper {
+  position: relative;
+}
+
 .card-product__price {
   display: inline-block;
   vertical-align: middle;
   margin-top: 5px;
+  margin-bottom: 29px;
   font-weight: bold;
   font-size: 1.1538rem;
   line-height: 1.6;
 }
 
 .card-product__order-btn {
-  margin-left: 113px;
+  position: absolute;
+  right: 0;
+  bottom: 27px;
 }
 
 .card-product__basket-svg {
-  margin-left: 72px;
-  margin-top: -52px;
-  margin-bottom: 27px;
-  padding-top: 30px;
-  padding-right: 25px;
   opacity: 0.2;
 }
 
@@ -104,15 +106,20 @@
     display: flex;
   }
 
+  .card-product__link--picture {
+    height: 331px;
+  }
+
   .card-product__desc {
     width: 277px;
     margin: 0;
-    padding: 25px 29px 15px 26px;
+    padding: 18px 29px 64px 26px;
   }
 
   .card-product__name {
-    margin-bottom: 7px;
-    margin-left: 2px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    margin-left: 1px;
     font-size: 1.5385rem;
     line-height: 1.2;
     letter-spacing: 1.2px;
@@ -120,7 +127,7 @@
 
   .card-product__parameters {
     position: relative;
-    margin-top: -2px;
+    margin-top: 0;
     margin-left: 1px;
     font-size: 1.1538rem;
     line-height: 2;
@@ -129,7 +136,7 @@
       position: absolute;
       width: 268px;
       left: 7px;
-      bottom: -190px;
+      bottom: -192px;
     }
   }
 
@@ -140,8 +147,9 @@
   }
 
   .card-product__price {
-    margin-top: 13px;
-    margin-left: 5px;
+    position: absolute;
+    left: 5px;
+    bottom: -65px;
     font-size: 1.3077rem;
     line-height: 1.41;
   }
@@ -157,7 +165,8 @@
 
   .card-product__order-btn {
     position: absolute;
-    right: 0;
+    right: 21px;
+    bottom: -39px;
   }
 
   .card-product__basket-svg {
@@ -166,17 +175,8 @@
   }
 
   .card-product--toys .card-product__name {
-    width: 207px;
-    margin-top: -1px;
-  }
-
-  .card-product--toys .card-product__price {
-    margin-top: 6px;
-    margin-left: 4px;
-  }
-
-  .card-product__link {
-    height: 332px;
+    width: 210px;
+    margin-top: 1px;
   }
 }
 
@@ -184,7 +184,7 @@
   .card-product__item {
     width: 316px;
     height: 100%;
-    margin-bottom: -2px;
+    margin-bottom: -27px;
     flex-direction: column;
   }
 
@@ -199,8 +199,12 @@
   }
 
   .card-product__price {
-    margin-top: -28px;
-    margin-left: 2px;
+    left: 4px;
+    bottom: -42px;
+  }
+
+  .card-product--toys .card-product__price {
+    bottom: -40px;
   }
 
   .card-product__basket-svg {
@@ -214,12 +218,12 @@
   }
 
   .card-product--toys .card-product__order-wrapper {
-    margin-top: 28px;
+    margin-top: 52px;
   }
 
   .card-product--toys .card-product__parameters::after {
     width: 258px;
-    bottom: -27px;
+    bottom: -34px;
     left: 0;
   }
 
@@ -231,5 +235,10 @@
     &--picture {
       height: 462px;
     }
+  }
+
+  .card-product__order-btn {
+    right: -2px;
+    bottom: -15px;
   }
 }
