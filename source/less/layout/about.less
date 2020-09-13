@@ -27,6 +27,7 @@
   font-size: 1.3077rem;
   line-height: 1.18;
   background-repeat: no-repeat;
+  overflow-wrap: anywhere;
 }
 
 .about__item--eco::before {
@@ -109,17 +110,19 @@
   .about__list {
     display: flex;
     flex-wrap: wrap;
-    width: 790px;
-    min-height: 500px;
+    justify-content: space-between;
+    width: 630px;
     margin-top: -10px;
-    margin-left: -105px;
+    margin-bottom: 58px;
+    margin-left: 39px;
+    padding-top: 25px;
   }
 
   .about__item {
+    width: 294px;
+    min-height: 98px;
     margin: 0;
-    margin-bottom: 3px;
-    padding-left: 145px;
-    padding-bottom: 30px;
+    padding: 0 0 58px;
     font-weight: bold;
     font-size: 1.5385rem;
     line-height: 1.1;
@@ -129,43 +132,53 @@
     }
 
     &--style {
-      margin-top: -29px;
-      padding-top: 10px;
       order: 3;
     }
 
     &--likes {
-      margin-top: -71px;
-      padding-top: 47px;
       order: 5;
     }
 
     &--love {
-      margin-top: -4px;
-      padding-left: 130px;
       order: 2;
     }
 
     &--home {
-      padding-top: 11px;
-      margin-top: -35px;
-      margin-left: -46px;
-      margin-bottom: -12px;
       order: 4;
     }
 
     &--gift {
-      padding-top: 70px;
-      margin-top: -93px;
-      margin-left: -23px;
-      margin-bottom: 19px;
       order: 6;
     }
   }
 
-  .about__item--eco::before,
+  .about__item--eco::before {
+    margin-top: 0;
+  }
+
   .about__item--style::before {
-    margin-top: 25px;
+    margin-top: 0;
+  }
+
+  .about__item--likes::before {
+    margin-top: 0;
+    margin-left: 7px;
+  }
+
+  .about__item--love::before {
+    margin-top: 0;
+    margin-left: 1px;
+    padding-bottom: 24px;
+  }
+
+  .about__item--home::before {
+    margin-top: 0;
+    margin-left: -8px;
+  }
+
+  .about__item--gift::before {
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
@@ -183,33 +196,15 @@
   }
 
   .about__list {
-    width: 805px;
+    width: 645px;
     margin-top: -22px;
-    margin-left: 81px;
+    margin-left: 226px;
   }
 
   .about__item {
-    padding-left: 145px;
-    padding-bottom: 30px;
+    padding-bottom: 58px;
     font-weight: bold;
     font-size: 1.5385rem;
     line-height: 1.1;
-
-    &--love {
-      padding-left: 147px;
-    }
-
-    &--home {
-      padding-left: 157px;
-    }
-
-    &--gift {
-      padding-left: 157px;
-    }
-  }
-
-  .about__item--eco::before,
-  .about__item--style::before {
-    margin-top: 25px;
   }
 }
