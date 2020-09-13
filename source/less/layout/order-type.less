@@ -18,6 +18,7 @@
 }
 
 .order-type__item {
+  position: relative;
   margin-bottom: 25px;
 
   &--accessory {
@@ -27,7 +28,9 @@
 }
 
 .order-type__input {
-  display: none;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
 .order-type__input[type="radio"] + .order-type__label::before {

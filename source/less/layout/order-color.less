@@ -5,10 +5,6 @@
   color: @color__seafoam-blue;
 }
 
-.order-color__checkbox {
-  display: none;
-}
-
 .order-color__name {
   display: block;
   position: relative;
@@ -23,7 +19,14 @@
 }
 
 .order-color__item {
+  position: relative;
   margin-bottom: 43px;
+}
+
+.order-color__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
 .order-color__checkbox[type="checkbox"] + .order-color__name::before {
