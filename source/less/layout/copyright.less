@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   min-height: 57px;
-  margin-top: 9px;
-  margin-bottom: -7px;
+  margin-top: 30px;
+  margin-bottom: 14px;
 }
 
 .copyright__link {
@@ -41,14 +41,23 @@
 
 @media (min-width: @tablet-width) {
   .copyright {
-    margin-top: -21px;
-    margin-left: 42px;
+    margin: 0;
+  }
+
+  .copyright__title {
+    margin-left: 0;
+  }
+
+  .copyright__link {
+    width: 33px;
+    margin-right: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .copyright {
-    margin-left: 218px;
+    margin-left: 0;
+    margin-right: 51px;
   }
 
   .copyright__form-footer {
